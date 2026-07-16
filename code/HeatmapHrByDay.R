@@ -21,27 +21,37 @@ lnames <- load("../data/temps/Trentino_hourly_T.RData")
 
 names(h_d_t)[1:5]<- c("stationid","date","hour","temp","flag")
 
-#df<- tibble(h_d_t) %>%
-#  filter(stationid =="T0092")
-
-#df<- df %>% mutate(year = year(date),
-#                  month = month(date, label=TRUE),
-#                  day = day(date))
+names(h_d_t)[1:5]<- c("stationid","date","hour","temp","flag")
+df <- tbl_df(h_d_t) %>%
+  filter(stationid =="T0001")
+ 
+df <- df %>% mutate(year = year(date),
+                  month = month(date, label=TRUE),
+                  day = day(date))
   
-#df$date<-ymd(df$date) # not necessary for plot but 
+df$date<-ymd(df$date) # not necessary for plot but 
 #useful if you want to do further work with the data
-
+ 
 #cleanup
-#rm(list=c("h_d_t","mo_bias","Tn","Tx",
-#          "Th_int_list","calibration_l",
-#          "calibration_shape","Tm_list"))
-
-
-df <- read.csv("../data/temps/StationT0001_temps.csv")
-
+rm(list=c("h_d_t","mo_bias","Tn","Tx",
+          "Th_int_list","calibration_l",
+          "calibration_shape","Tm_list"))
+ 
+ 
 #create plotting df
 df <-df %>% select(stationid,day,hour,month,year,temp)%>%
         fill(temp) #optional - see note below
+ 
+
+
+
+#####
+
+# To run from the Trentino hourly temp data data asset, uncomment this line
+#df <- read.csv("../data/temps/StationT0001_temps.csv")
+
+#####
+
 
 # Re: use of fill
 # This code is for demonstrating a visualisation technique
