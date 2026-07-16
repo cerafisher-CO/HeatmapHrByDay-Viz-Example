@@ -27,8 +27,8 @@ library(tibble)
 
 #cleanup
 #rm(list=c("h_d_t","mo_bias","Tn","Tx",
-          "Th_int_list","calibration_l",
-          "calibration_shape","Tm_list"))
+#          "Th_int_list","calibration_l",
+#          "calibration_shape","Tm_list"))
 
 
 df <- read.csv("../data/temps/StationT0001_temps.csv")
