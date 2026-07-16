@@ -22,7 +22,7 @@ lnames <- load("../data/temps/Trentino_hourly_T.RData")
 names(h_d_t)[1:5]<- c("stationid","date","hour","temp","flag")
 
 names(h_d_t)[1:5]<- c("stationid","date","hour","temp","flag")
-df <- tbl_df(h_d_t) %>%
+df <- as_tibble(h_d_t) %>%
   filter(stationid =="T0001")
  
 df <- df %>% mutate(year = year(date),
@@ -75,7 +75,7 @@ statno <-unique(df$stationid)
 
 ######## Plotting starts here#####################
 p <- ggplot(df, aes(day,hour,fill = temp))+
-  geom_tile(color= "white", size=0.1) + 
+  geom_tile(color= "white", linewidth=0.1) + 
   scale_fill_viridis(name = "Hrly Temps C",option = "C")
 p <- p + facet_grid(year ~ month)
 p <- p + scale_y_continuous(trans = "reverse", breaks = unique(df$hour))
