@@ -11,15 +11,22 @@ library(tibble)
 
 data<- data(Trentino_hourly_T,package = "Interpol.T")
 
+save.image(file="../results/Trentino_hourly_T.RData")
+
 names(h_d_t)[1:5]<- c("stationid","date","hour","temp","flag")
 df<- tibble(h_d_t) %>%
-  filter(stationid =="T0001")
+  filter(stationid =="T0092")
 
 df<- df %>% mutate(year = year(date),
                   month = month(date, label=TRUE),
                   day = day(date))
   
 df$date<-ymd(df$date) # not necessary for plot but 
+
+write.csv(df, file="../results/StationT0092_temps.csv", 
+          quote=FALSE, 
+          row.names = FALSE)
+
 #useful if you want to do further work with the data
 
 #cleanup
