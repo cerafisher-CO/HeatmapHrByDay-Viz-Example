@@ -9,31 +9,29 @@ library(ggExtra) # because remembering ggplot theme options is beyond me
 library(tidyr) 
 library(tibble)
 
-data<- data(Trentino_hourly_T,package = "Interpol.T")
+#data<- data(Trentino_hourly_T,package = "Interpol.T")
 
-save.image(file="../results/Trentino_hourly_T.RData")
+#names(h_d_t)[1:5]<- c("stationid","date","hour","temp","flag")
 
-names(h_d_t)[1:5]<- c("stationid","date","hour","temp","flag")
-df<- tibble(h_d_t) %>%
-  filter(stationid =="T0092")
 
-df<- df %>% mutate(year = year(date),
-                  month = month(date, label=TRUE),
-                  day = day(date))
+
+#df<- tibble(h_d_t) %>%
+#  filter(stationid =="T0092")
+
+#df<- df %>% mutate(year = year(date),
+#                  month = month(date, label=TRUE),
+#                  day = day(date))
   
-df$date<-ymd(df$date) # not necessary for plot but 
-
-write.csv(df, file="../results/StationT0092_temps.csv", 
-          quote=FALSE, 
-          row.names = FALSE)
-
+#df$date<-ymd(df$date) # not necessary for plot but 
 #useful if you want to do further work with the data
 
 #cleanup
-rm(list=c("h_d_t","mo_bias","Tn","Tx",
+#rm(list=c("h_d_t","mo_bias","Tn","Tx",
           "Th_int_list","calibration_l",
           "calibration_shape","Tm_list"))
 
+
+df <- read.csv("../data/temps/StationT0001_temps.csv")
 
 #create plotting df
 df <-df %>% select(stationid,day,hour,month,year,temp)%>%
