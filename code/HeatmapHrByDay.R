@@ -23,7 +23,7 @@ names(h_d_t)[1:5]<- c("stationid","date","hour","temp","flag")
 
 names(h_d_t)[1:5]<- c("stationid","date","hour","temp","flag")
 df <- as_tibble(h_d_t) %>%
-  filter(stationid =="T0001")
+  filter(stationid =="T0092")
  
 df <- df %>% mutate(year = year(date),
                   month = month(date, label=TRUE),
