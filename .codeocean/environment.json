@@ -10,25 +10,32 @@
 		"rcran": {
 			"packages": [
 				{
-					"name": "ggplot2"
+					"name": "ggplot2",
+					"version": "4.0.3"
 				},
 				{
-					"name": "dplyr"
+					"name": "dplyr",
+					"version": "1.2.1"
 				},
 				{
-					"name": "viridis"
+					"name": "viridis",
+					"version": "0.6.5"
 				},
 				{
-					"name": "Interpol.T"
+					"name": "Interpol.T",
+					"version": "2.1.1"
 				},
 				{
-					"name": "lubridate"
+					"name": "lubridate",
+					"version": "1.9.5"
 				},
 				{
-					"name": "ggExtra"
+					"name": "ggExtra",
+					"version": "0.11.0"
 				},
 				{
-					"name": "tidyr"
+					"name": "tidyr",
+					"version": "1.3.2"
 				}
 			]
 		}
