@@ -9,11 +9,17 @@ library(ggExtra) # because remembering ggplot theme options is beyond me
 library(tidyr) 
 library(tibble)
 
-#data<- data(Trentino_hourly_T,package = "Interpol.T")
+## We're actually loading a data object that correspond to a builtin dataset from the 
+## Interpol.T package. Original code: 
+#####......
+#data <- data(Trentino_hourly_T,package = "Interpol.T")
+#####......
 
-#names(h_d_t)[1:5]<- c("stationid","date","hour","temp","flag")
+lnames <- load("../data/temps/Trentino_hourly_T.RData")
 
 
+
+names(h_d_t)[1:5]<- c("stationid","date","hour","temp","flag")
 
 #df<- tibble(h_d_t) %>%
 #  filter(stationid =="T0092")
