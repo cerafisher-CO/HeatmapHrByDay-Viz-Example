@@ -7,12 +7,12 @@ library(Interpol.T) #  will generate a large dataset on initial load
 library(lubridate) # for easy date manipulation
 library(ggExtra) # because remembering ggplot theme options is beyond me
 library(tidyr) 
-
+library(tibble)
 
 data<- data(Trentino_hourly_T,package = "Interpol.T")
 
 names(h_d_t)[1:5]<- c("stationid","date","hour","temp","flag")
-df<- tbl_df(h_d_t) %>%
+df<- tibble(h_d_t) %>%
   filter(stationid =="T0001")
 
 df<- df %>% mutate(year = year(date),
@@ -74,6 +74,11 @@ p <- p + theme(legend.position = "bottom") +
 
 # you will want to expand your plot screen before this bit!
 p #awesomeness
+
+png(filename = "../results/HourlyTemps_Heatmap.png")
+p
+dev.off()
+
 
 #################################
 
