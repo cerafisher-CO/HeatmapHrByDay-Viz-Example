@@ -1,0 +1,36 @@
+{
+	"version": 1,
+	"base_image": "codeocean/py-r:python3.12.8-R4.4.2-JupyterLab4.3.5-RStudiorstudio-server-2024.12.1-563-ubuntu22.04",
+	"options": {
+		"registry_host_arg": true,
+		"git_ask_pass": true,
+		"mount_secrets": true
+	},
+	"installers": {
+		"rcran": {
+			"packages": [
+				{
+					"name": "ggplot2"
+				},
+				{
+					"name": "dplyr"
+				},
+				{
+					"name": "viridis"
+				},
+				{
+					"name": "Interpol.T"
+				},
+				{
+					"name": "lubridate"
+				},
+				{
+					"name": "ggExtra"
+				},
+				{
+					"name": "tidyr"
+				}
+			]
+		}
+	}
+}
