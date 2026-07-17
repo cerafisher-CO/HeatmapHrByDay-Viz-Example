@@ -21,7 +21,3 @@ lubridate
 ggExtra 
 
 tidyr 
-
-### Data Asset available on `demo`
-
-[Trentino hourly temp data](https://acmecorp-demo.codeocean.com/data-assets/16683fc4-0355-4692-9e9e-00afcdb867c0/temps)
