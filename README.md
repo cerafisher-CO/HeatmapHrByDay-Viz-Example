@@ -8,7 +8,7 @@ On CFN deployment:
 **Python and R (Jupyterlab/RStudio) (3.12.8, R 4.4.2, JupyterLab 4.3.5, RStudio 2024.12.1-563)**
 
 On Allen Institute Deployment: 
-**Python + R (Python 3.10.12, R 4.2.3, JupyterLab, RStudio)**
+**Python + R (Python 3.12.4, R 4.4.2, JupyterLab, RStudio)**
 
 ### R Packages 
 
