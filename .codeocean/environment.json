@@ -7,6 +7,25 @@
 		"mount_secrets": true
 	},
 	"installers": {
+		"apt": {
+			"packages": [
+				{
+					"name": "pandoc",
+					"version": "2.9.2.1-3ubuntu2"
+				},
+				{
+					"name": "shiny-server",
+					"version": "1.5.23.1030"
+				}
+			],
+			"sources": [
+				"deb http://deb.codeocean.com/shiny-server-jammy/ ubuntu main"
+			],
+			"gpg_keys": [
+				"0xAD2323F17326AE31401037733E05EBFF05441C52"
+			],
+			"install_software_properties_common": true
+		},
 		"rcran": {
 			"packages": [
 				{
@@ -36,6 +55,10 @@
 				{
 					"name": "tidyr",
 					"version": "1.3.2"
+				},
+				{
+					"name": "shiny",
+					"version": "1.14.0"
 				}
 			]
 		}

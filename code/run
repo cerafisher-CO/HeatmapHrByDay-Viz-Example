@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-set -ex
+set -euo pipefail
 
-# This is the master script for the capsule. When you click "Reproducible Run", the code in this file will execute.
-
-Rscript HeatmapHrByDay.R
+# Launch the Shiny app on port 3838, listening on all interfaces.
+# Cloud Workstation (Shiny IDE) routes traffic to this port automatically.
+Rscript -e "shiny::runApp('/code/app.R', host='0.0.0.0', port=3838, launch.browser=FALSE)"
