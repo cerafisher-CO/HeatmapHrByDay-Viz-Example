@@ -12,10 +12,10 @@ library(tibble)
 ## We're actually loading a data object that correspond to a builtin dataset from the 
 ## Interpol.T package. Original code: 
 #####......
-#data <- data(Trentino_hourly_T,package = "Interpol.T")
+data <- data(Trentino_hourly_T,package = "Interpol.T")
 #####......
 
-lnames <- load("../data/temps/Trentino_hourly_T.RData")
+#lnames <- load("../data/temps/Trentino_hourly_T.RData")
 
 
 
