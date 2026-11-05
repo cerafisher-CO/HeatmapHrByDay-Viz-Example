@@ -1,0 +1,26 @@
+{
+    "id": "5DD1A1B3",
+    "path": "~/capsule/code/HeatmapHrByDay.R",
+    "project_path": "HeatmapHrByDay.R",
+    "type": "r_source",
+    "hash": "3335368052",
+    "contents": "",
+    "dirty": false,
+    "created": 1784224205572.0,
+    "source_on_save": false,
+    "relative_order": 1,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "86,40",
+        "scrollLine": "83"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1784224301,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1784224301144,
+    "read_only": false,
+    "read_only_alternatives": []
+}
