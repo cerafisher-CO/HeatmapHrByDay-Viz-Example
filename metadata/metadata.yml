@@ -1,8 +1,8 @@
 metadata_version: 1
 name: Heatmap Viz Example
-description: Interactive Shiny app that renders an hourly-by-day temperature heatmap
+description: "Interactive Shiny app that renders an hourly-by-day temperature heatmap
   from the Trentino hourly temperature dataset, based on the hourly heatmap recipe
-  by John MacKintosh (R Graph Gallery).
+  by John MacKintosh (R Graph Gallery). \nTrivial update"
 tags:
 - Shiny
 - R
